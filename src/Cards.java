@@ -57,4 +57,21 @@ public class Cards {
             return pile.length;
         }
     }
+
+    public class Pack {
+        CardPile thePack = new CardPile();
+
+        public Pack() {
+            for (int suit = 1; suit <= 4; suit ++) {
+                for (int value = 1; value <= 13; value++) {
+                    Card card = new Card(suit, value);
+                    thePack.putDown(card);
+                }
+            }
+        }
+
+        public void shuffle() {
+            CardPile tempPack = new CardPile();
+        }
+    }
 }
